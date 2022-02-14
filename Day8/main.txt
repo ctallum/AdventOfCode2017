@@ -1,0 +1,2031 @@
+from collections import defaultdict
+
+with open('input.txt') as f:
+    data = [a.strip() for a in f.readlines()]
+    registers = [a[:a.index(' ')] for a in data]
+    data = [a.split(' ') for a in data]
+    data = [[f'dict["{a[0]}"]'] + a[1:] for a in data]
+    data = [a[0:4] + [f'dict["{a[4]}"]'] + a[5:] for a in data]
+    data = [" ".join(a[3:])+": " + " ".join(a[0:3]) for a in data]
+    data = [a.replace('dec',"-=") for a in data]
+    data = [a.replace('inc',"+=") for a in data]
+
+dict = defaultdict(int)
+
+max_value = 0
+
+
+for reg in registers:
+    dict[reg] = 0
+
+
+if dict["cag"] != 2: dict["ev"] -= -705
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] >= -8: dict["b"] -= -195
+max_value = max(max(dict.values()),max_value)
+if dict["v"] > -7: dict["red"] -= -404
+max_value = max(max(dict.values()),max_value)
+if dict["k"] >= -9: dict["d"] += -971
+max_value = max(max(dict.values()),max_value)
+if dict["k"] > -8: dict["k"] += 303
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] > 697: dict["cag"] += 539
+max_value = max(max(dict.values()),max_value)
+if dict["d"] <= -963: dict["ev"] += -11
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] < -2: dict["alf"] += -634
+max_value = max(max(dict.values()),max_value)
+if dict["b"] <= 201: dict["eb"] -= 927
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] >= -930: dict["e"] -= 67
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] < 8: dict["he"] -= -29
+max_value = max(max(dict.values()),max_value)
+if dict["b"] >= 188: dict["cox"] += 193
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] >= -7: dict["red"] -= 340
+max_value = max(max(dict.values()),max_value)
+if dict["red"] > 57: dict["k"] -= 8
+max_value = max(max(dict.values()),max_value)
+if dict["e"] <= -75: dict["eb"] += -606
+max_value = max(max(dict.values()),max_value)
+if dict["red"] == 64: dict["xoc"] += 337
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] == 0: dict["xoc"] += 186
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] >= -5: dict["cox"] += 840
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] != -3: dict["s"] += -449
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] < 2: dict["eb"] += -233
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] <= 9: dict["npo"] += -808
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] > -1161: dict["eb"] -= 139
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] > -7: dict["ty"] += -929
+max_value = max(max(dict.values()),max_value)
+if dict["d"] > -977: dict["mk"] += 789
+max_value = max(max(dict.values()),max_value)
+if dict["k"] < 299: dict["red"] -= 915
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] == 789: dict["anb"] += 852
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] == -6: dict["red"] -= 242
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] < 546: dict["e"] += -29
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] > 535: dict["alf"] -= -219
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] < -921: dict["red"] -= -298
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] <= 2: dict["tm"] -= 175
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] != -1298: dict["alf"] -= 553
+max_value = max(max(dict.values()),max_value)
+if dict["s"] != -449: dict["alf"] += -870
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] < 1036: dict["v"] -= 744
+max_value = max(max(dict.values()),max_value)
+if dict["he"] > 24: dict["d"] -= -720
+max_value = max(max(dict.values()),max_value)
+if dict["k"] <= 301: dict["ty"] += -201
+max_value = max(max(dict.values()),max_value)
+if dict["v"] > -744: dict["xoc"] += 956
+max_value = max(max(dict.values()),max_value)
+if dict["e"] >= -100: dict["s"] -= 539
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] != 852: dict["mk"] -= -37
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] < -167: dict["mk"] -= 833
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] < 686: dict["ev"] -= -410
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] != 539: dict["s"] -= 77
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] >= -2: dict["anb"] += 917
+max_value = max(max(dict.values()),max_value)
+if dict["s"] >= -997: dict["obo"] -= -5
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] == -175: dict["qby"] += -231
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] <= -167: dict["ev"] -= 378
+max_value = max(max(dict.values()),max_value)
+if dict["s"] < -985: dict["b"] -= -106
+max_value = max(max(dict.values()),max_value)
+if dict["e"] < -89: dict["s"] -= 301
+max_value = max(max(dict.values()),max_value)
+if dict["b"] == 301: dict["npo"] += 232
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] < -9: dict["red"] -= -960
+max_value = max(max(dict.values()),max_value)
+if dict["k"] == 300: dict["he"] += -789
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] < 1033: dict["npo"] -= 826
+max_value = max(max(dict.values()),max_value)
+if dict["k"] > 291: dict["e"] += 101
+max_value = max(max(dict.values()),max_value)
+if dict["he"] > 27: dict["v"] += -898
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] > 1767: dict["alf"] += 141
+max_value = max(max(dict.values()),max_value)
+if dict["e"] < -2: dict["red"] += -613
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] >= 530: dict["tm"] += -151
+max_value = max(max(dict.values()),max_value)
+if dict["b"] != 305: dict["k"] += -346
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] <= 546: dict["he"] -= 967
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] < 543: dict["ev"] -= -931
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] < -228: dict["swy"] -= 309
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] > 1030: dict["d"] += 437
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] <= 1249: dict["ty"] -= 586
+max_value = max(max(dict.values()),max_value)
+if dict["e"] <= -2: dict["alf"] -= 299
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] == 523: dict["d"] += 977
+max_value = max(max(dict.values()),max_value)
+if dict["s"] <= -1282: dict["d"] += 594
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] < -306: dict["ev"] += 21
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] < 543: dict["qby"] -= -722
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] < 1259: dict["k"] += -381
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] > 1764: dict["alf"] += 847
+max_value = max(max(dict.values()),max_value)
+if dict["s"] <= -1292: dict["k"] += 126
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] > -4: dict["eb"] += -109
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] < -300: dict["obo"] -= 900
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] <= -35: dict["obo"] -= 364
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] >= -1416: dict["swy"] += -211
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] <= 1: dict["ty"] -= -680
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] > 1024: dict["ty"] -= -235
+max_value = max(max(dict.values()),max_value)
+if dict["red"] <= -559: dict["cag"] -= -261
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] == 0: dict["obo"] -= -897
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] < -49: dict["tm"] += -981
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] >= -1402: dict["ty"] += -805
+max_value = max(max(dict.values()),max_value)
+if dict["red"] < -552: dict["mk"] += 278
+max_value = max(max(dict.values()),max_value)
+if dict["v"] > -1645: dict["ev"] += 63
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] <= 530: dict["swy"] -= -388
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] != -357: dict["mqk"] += 187
+max_value = max(max(dict.values()),max_value)
+if dict["b"] < 309: dict["s"] += 416
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] >= 185: dict["qby"] += 399
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] != 188: dict["red"] += -680
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] >= -1407: dict["he"] += -981
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] >= -327: dict["d"] += 225
+max_value = max(max(dict.values()),max_value)
+if dict["d"] <= 1991: dict["he"] -= 158
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] == 890: dict["d"] -= 74
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] <= 1770: dict["k"] -= -930
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] == 179: dict["s"] -= -546
+max_value = max(max(dict.values()),max_value)
+if dict["k"] >= 874: dict["ty"] -= 733
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] == -362: dict["ev"] -= 581
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] == -362: dict["cox"] -= -922
+max_value = max(max(dict.values()),max_value)
+if dict["e"] == 5: dict["obo"] -= 922
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] == -326: dict["d"] += -948
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] <= 241: dict["cag"] += 161
+max_value = max(max(dict.values()),max_value)
+if dict["e"] != -1: dict["eb"] += -580
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] != 889: dict["anb"] += -632
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] <= 239: dict["red"] -= -285
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] >= -1997: dict["qby"] += 550
+max_value = max(max(dict.values()),max_value)
+if dict["k"] > 869: dict["e"] -= 930
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] > -138: dict["eb"] += 604
+max_value = max(max(dict.values()),max_value)
+if dict["he"] != -1100: dict["obo"] += 383
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] <= -1377: dict["s"] -= -89
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] < -1532: dict["qby"] -= -821
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] >= 2257: dict["ty"] += 940
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] != -123: dict["alf"] += -421
+max_value = max(max(dict.values()),max_value)
+if dict["b"] != 293: dict["qby"] += 787
+max_value = max(max(dict.values()),max_value)
+if dict["b"] < 301: dict["alf"] += -80
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] <= -1378: dict["b"] -= 205
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] != -892: dict["qby"] -= 870
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] == -132: dict["d"] += 183
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] != 187: dict["s"] -= -81
+max_value = max(max(dict.values()),max_value)
+if dict["d"] >= 1138: dict["swy"] += 976
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] == 1138: dict["red"] -= 281
+max_value = max(max(dict.values()),max_value)
+if dict["d"] < 1141: dict["xoc"] += 681
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] > -902: dict["v"] -= 14
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] <= 530: dict["he"] -= -525
+max_value = max(max(dict.values()),max_value)
+if dict["red"] >= -955: dict["v"] += -866
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] != 240: dict["cag"] += -835
+max_value = max(max(dict.values()),max_value)
+if dict["s"] <= -781: dict["qby"] += -549
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] >= 229: dict["eb"] -= 584
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] >= -904: dict["qby"] -= -711
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] <= 1144: dict["ev"] += -400
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] >= 840: dict["k"] += 82
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] != 229: dict["e"] -= -415
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] > 1128: dict["red"] -= -923
+max_value = max(max(dict.values()),max_value)
+if dict["b"] != 86: dict["v"] -= 602
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] > 346: dict["ty"] -= -699
+max_value = max(max(dict.values()),max_value)
+if dict["k"] > 968: dict["xoc"] -= 549
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] < 2343: dict["k"] += 317
+max_value = max(max(dict.values()),max_value)
+if dict["d"] >= 1137: dict["npo"] -= 919
+max_value = max(max(dict.values()),max_value)
+if dict["e"] > -519: dict["e"] += 421
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] <= 351: dict["eb"] -= -104
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] != 2342: dict["b"] += 368
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] == 357: dict["mk"] -= -987
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] <= 236: dict["eb"] -= -509
+max_value = max(max(dict.values()),max_value)
+if dict["v"] != -3127: dict["obo"] -= -380
+max_value = max(max(dict.values()),max_value)
+if dict["b"] < 455: dict["npo"] -= -790
+max_value = max(max(dict.values()),max_value)
+if dict["k"] < 1287: dict["xoc"] += 405
+max_value = max(max(dict.values()),max_value)
+if dict["b"] < 465: dict["obo"] -= -56
+max_value = max(max(dict.values()),max_value)
+if dict["k"] != 1281: dict["swy"] -= 194
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] <= -326: dict["red"] += -562
+max_value = max(max(dict.values()),max_value)
+if dict["e"] <= -86: dict["swy"] -= 75
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] == 350: dict["obo"] -= -4
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] < 931: dict["e"] += 533
+max_value = max(max(dict.values()),max_value)
+if dict["d"] < 1146: dict["cox"] += -584
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] >= -1354: dict["swy"] += 506
+max_value = max(max(dict.values()),max_value)
+if dict["k"] >= 1279: dict["obo"] -= 458
+max_value = max(max(dict.values()),max_value)
+if dict["e"] > 447: dict["swy"] += 447
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] <= 1377: dict["qby"] -= 847
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] < 931: dict["xoc"] += 225
+max_value = max(max(dict.values()),max_value)
+if dict["b"] > 462: dict["obo"] -= 301
+max_value = max(max(dict.values()),max_value)
+if dict["e"] > 438: dict["cag"] += -740
+max_value = max(max(dict.values()),max_value)
+if dict["e"] <= 447: dict["tm"] -= -83
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] <= -866: dict["tm"] -= -151
+max_value = max(max(dict.values()),max_value)
+if dict["s"] < -784: dict["npo"] += 26
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] != 1368: dict["v"] += 12
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] > 340: dict["eb"] += -399
+max_value = max(max(dict.values()),max_value)
+if dict["d"] == 1143: dict["eb"] -= 780
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] == -91: dict["e"] -= 87
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] <= 1139: dict["k"] -= -13
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] >= 567: dict["v"] -= 829
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] < 351: dict["k"] -= -229
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] == 1143: dict["qby"] += 972
+max_value = max(max(dict.values()),max_value)
+if dict["s"] >= -789: dict["s"] += 609
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] > 346: dict["mk"] -= -931
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] > -880: dict["mqk"] += -605
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] <= 1139: dict["v"] += 302
+max_value = max(max(dict.values()),max_value)
+if dict["v"] > -3647: dict["mk"] -= 342
+max_value = max(max(dict.values()),max_value)
+if dict["k"] <= 1523: dict["xoc"] += -905
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] == 1493: dict["qby"] += -412
+max_value = max(max(dict.values()),max_value)
+if dict["d"] > 1142: dict["v"] -= -548
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] >= -771: dict["xoc"] += 311
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] < 551: dict["npo"] += -955
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] > 821: dict["swy"] += -885
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] >= 100: dict["ty"] -= 91
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] <= -1492: dict["s"] -= -840
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] > 342: dict["qby"] += 158
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] >= -878: dict["ev"] += 227
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] <= -92: dict["alf"] -= 612
+max_value = max(max(dict.values()),max_value)
+if dict["he"] <= -572: dict["ev"] += 395
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] > -311: dict["s"] += 570
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] > -382: dict["s"] += 283
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] >= -94: dict["xoc"] += 297
+max_value = max(max(dict.values()),max_value)
+if dict["d"] != 1153: dict["v"] -= 100
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] <= 19: dict["cag"] += 928
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] > -765: dict["tm"] += 829
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] >= 8: dict["alf"] += -94
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] <= 1367: dict["ty"] += -224
+max_value = max(max(dict.values()),max_value)
+if dict["d"] > 1137: dict["obo"] -= -352
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] <= 580: dict["mqk"] += 223
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] >= -2541: dict["cag"] += 55
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] > -474: dict["red"] -= 969
+max_value = max(max(dict.values()),max_value)
+if dict["e"] != 447: dict["alf"] += -564
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] < -400: dict["qby"] += -97
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] > 107: dict["red"] -= -530
+max_value = max(max(dict.values()),max_value)
+if dict["he"] > -574: dict["ev"] += -579
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] <= -2528: dict["tm"] -= -788
+max_value = max(max(dict.values()),max_value)
+if dict["v"] > -3191: dict["alf"] += -217
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] >= 1362: dict["tm"] += 635
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] < -189: dict["tm"] += -217
+max_value = max(max(dict.values()),max_value)
+if dict["v"] != -3191: dict["cag"] -= -547
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] > -1045: dict["red"] -= -241
+max_value = max(max(dict.values()),max_value)
+if dict["b"] <= 473: dict["red"] += -492
+max_value = max(max(dict.values()),max_value)
+if dict["b"] > 454: dict["he"] += 46
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] > 8: dict["xoc"] += 86
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] < 1140: dict["d"] -= -755
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] <= -405: dict["mk"] += -347
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] >= -1497: dict["v"] -= 870
+max_value = max(max(dict.values()),max_value)
+if dict["red"] != -1287: dict["npo"] += 216
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] > -414: dict["anb"] += -574
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] == -2534: dict["ev"] += -364
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] < -1277: dict["anb"] -= -825
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] < 1372: dict["k"] -= 587
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] > -401: dict["anb"] += -888
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] != -1283: dict["swy"] -= -435
+max_value = max(max(dict.values()),max_value)
+if dict["e"] != 444: dict["e"] -= 551
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] == -1036: dict["swy"] -= 772
+max_value = max(max(dict.values()),max_value)
+if dict["e"] == 444: dict["tm"] -= -339
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] == 470: dict["swy"] -= 259
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] >= -359: dict["xoc"] += -224
+max_value = max(max(dict.values()),max_value)
+if dict["red"] >= -1279: dict["ty"] += 265
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] > -202: dict["obo"] -= 449
+max_value = max(max(dict.values()),max_value)
+if dict["e"] >= 438: dict["d"] += 891
+max_value = max(max(dict.values()),max_value)
+if dict["b"] >= 461: dict["cag"] -= 606
+max_value = max(max(dict.values()),max_value)
+if dict["v"] != -4064: dict["mk"] += -894
+max_value = max(max(dict.values()),max_value)
+if dict["d"] != 2034: dict["cag"] -= -128
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] <= -2528: dict["eb"] -= 723
+max_value = max(max(dict.values()),max_value)
+if dict["s"] < 1525: dict["swy"] += -12
+max_value = max(max(dict.values()),max_value)
+if dict["d"] == 2032: dict["s"] += -569
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] >= -1038: dict["npo"] += 326
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] == 1379: dict["cox"] -= -213
+max_value = max(max(dict.values()),max_value)
+if dict["d"] > 2026: dict["obo"] -= -222
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] == 1393: dict["ev"] -= 809
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] != -1037: dict["s"] += -637
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] == 942: dict["s"] -= -892
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] != -491: dict["eb"] += -248
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] != 1142: dict["b"] -= 499
+max_value = max(max(dict.values()),max_value)
+if dict["d"] <= 2033: dict["b"] -= 543
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] < -411: dict["mk"] += 345
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] != -960: dict["ty"] -= -284
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] < -3498: dict["d"] -= -327
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] > -196: dict["cag"] += -743
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] > -374: dict["cag"] -= 708
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] == 113: dict["eb"] += 935
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] == 113: dict["d"] -= -908
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] == 113: dict["npo"] += -753
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] > -1045: dict["cag"] -= -227
+max_value = max(max(dict.values()),max_value)
+if dict["v"] <= -4061: dict["red"] -= -658
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] < 1397: dict["cox"] += -66
+max_value = max(max(dict.values()),max_value)
+if dict["b"] > 463: dict["cag"] -= -209
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] != -1037: dict["cox"] += -245
+max_value = max(max(dict.values()),max_value)
+if dict["s"] >= 2402: dict["alf"] -= -212
+max_value = max(max(dict.values()),max_value)
+if dict["d"] >= 3273: dict["d"] += 590
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] > 935: dict["xoc"] += -325
+max_value = max(max(dict.values()),max_value)
+if dict["he"] >= -519: dict["red"] += 935
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] >= -366: dict["tm"] -= 332
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] <= 615: dict["cag"] += 583
+max_value = max(max(dict.values()),max_value)
+if dict["e"] >= 439: dict["e"] += -892
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] > -629: dict["npo"] += -628
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] <= 1958: dict["red"] += -819
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] > -372: dict["qby"] -= -960
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] < 1959: dict["red"] -= -781
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] < 621: dict["cox"] += -831
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] >= 559: dict["b"] += -830
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] < -1507: dict["anb"] += 654
+max_value = max(max(dict.values()),max_value)
+if dict["red"] >= -659: dict["cag"] -= 995
+max_value = max(max(dict.values()),max_value)
+if dict["b"] < -361: dict["npo"] += 356
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] > 2093: dict["tm"] -= 286
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] <= 569: dict["mk"] -= 369
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] != 2112: dict["mk"] -= -971
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] > 617: dict["swy"] += 137
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] > -1355: dict["alf"] -= -743
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] < 569: dict["alf"] += 39
+max_value = max(max(dict.values()),max_value)
+if dict["s"] <= 2413: dict["tm"] -= -42
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] != -48: dict["anb"] += -685
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] <= 1360: dict["ty"] -= 660
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] < -359: dict["npo"] -= 313
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] >= -646: dict["cag"] += -611
+max_value = max(max(dict.values()),max_value)
+if dict["v"] <= -4067: dict["tm"] += 728
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] != -3124: dict["swy"] += -4
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] >= 613: dict["npo"] += 359
+max_value = max(max(dict.values()),max_value)
+if dict["b"] != -358: dict["obo"] += 694
+max_value = max(max(dict.values()),max_value)
+if dict["e"] >= -452: dict["obo"] -= 439
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] <= 626: dict["npo"] -= -160
+max_value = max(max(dict.values()),max_value)
+if dict["e"] <= -439: dict["red"] += -659
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] == -382: dict["b"] += -445
+max_value = max(max(dict.values()),max_value)
+if dict["k"] > 931: dict["red"] -= 543
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] != 2093: dict["s"] -= 274
+max_value = max(max(dict.values()),max_value)
+if dict["k"] <= 934: dict["cag"] -= -338
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] == -45: dict["alf"] -= -211
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] == 1706: dict["v"] -= -451
+max_value = max(max(dict.values()),max_value)
+if dict["v"] > -3606: dict["obo"] -= -465
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] > 2100: dict["k"] += 415
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] == 109: dict["anb"] -= 220
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] < 477: dict["alf"] += -3
+max_value = max(max(dict.values()),max_value)
+if dict["s"] > 2131: dict["d"] -= 164
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] >= -40: dict["qby"] -= -974
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] < 1146: dict["cag"] -= 891
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] > 2100: dict["d"] -= -337
+max_value = max(max(dict.values()),max_value)
+if dict["d"] != 3442: dict["cag"] -= -628
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] == -46: dict["k"] -= -648
+max_value = max(max(dict.values()),max_value)
+if dict["k"] == 1996: dict["red"] -= -329
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] <= -38: dict["e"] += -891
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] >= -99: dict["cox"] += -626
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] >= -204: dict["mqk"] += -349
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] > 2092: dict["alf"] += 388
+max_value = max(max(dict.values()),max_value)
+if dict["d"] > 3443: dict["mk"] += -430
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] < 352: dict["eb"] -= 338
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] == -147: dict["mk"] += -215
+max_value = max(max(dict.values()),max_value)
+if dict["b"] >= -819: dict["e"] -= 171
+max_value = max(max(dict.values()),max_value)
+if dict["d"] != 3433: dict["alf"] -= -205
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] == 2102: dict["d"] += -490
+max_value = max(max(dict.values()),max_value)
+if dict["he"] > -528: dict["e"] += 612
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] > -543: dict["anb"] += -811
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] >= -154: dict["he"] += 685
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] <= 1129: dict["red"] -= -748
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] >= -97: dict["ty"] -= -872
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] == -2908: dict["b"] += -920
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] >= -548: dict["s"] += -701
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] > 545: dict["tm"] += 136
+max_value = max(max(dict.values()),max_value)
+if dict["e"] != -898: dict["he"] -= -100
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] >= 1132: dict["qby"] += 552
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] == 617: dict["xoc"] += 700
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] != -385: dict["xoc"] -= 827
+max_value = max(max(dict.values()),max_value)
+if dict["d"] != 2956: dict["anb"] += 738
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] == -544: dict["eb"] += 476
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] == -366: dict["s"] -= -100
+max_value = max(max(dict.values()),max_value)
+if dict["e"] == -898: dict["obo"] += -602
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] == 490: dict["tm"] += -80
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] == -2432: dict["eb"] += 160
+max_value = max(max(dict.values()),max_value)
+if dict["he"] == 159: dict["he"] += 229
+max_value = max(max(dict.values()),max_value)
+if dict["b"] > -1739: dict["tm"] += 453
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] < 2655: dict["obo"] -= 786
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] != 2651: dict["swy"] += -120
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] != -1770: dict["ev"] -= -382
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] < -2265: dict["qby"] -= 41
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] > -1765: dict["cox"] += -991
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] > -1773: dict["cag"] += -713
+max_value = max(max(dict.values()),max_value)
+if dict["red"] <= -1522: dict["he"] += -958
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] != -551: dict["ty"] += -426
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] == 349: dict["k"] += 902
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] < -2274: dict["npo"] -= -550
+max_value = max(max(dict.values()),max_value)
+if dict["d"] < 2954: dict["swy"] += -30
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] < -1139: dict["anb"] -= 990
+max_value = max(max(dict.values()),max_value)
+if dict["red"] >= -1529: dict["ty"] -= 301
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] > 347: dict["ev"] += -687
+max_value = max(max(dict.values()),max_value)
+if dict["he"] <= -802: dict["ty"] -= 261
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] < -1043: dict["b"] -= -313
+max_value = max(max(dict.values()),max_value)
+if dict["k"] != 2889: dict["alf"] -= 231
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] >= 2618: dict["npo"] += 956
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] <= -1135: dict["cag"] += -39
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] > 2605: dict["he"] -= 117
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] > -4421: dict["v"] += -574
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] <= 538: dict["npo"] += -179
+max_value = max(max(dict.values()),max_value)
+if dict["he"] < -910: dict["v"] += -737
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] < -37: dict["npo"] += 722
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] != 313: dict["mk"] += 200
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] == -544: dict["npo"] -= -604
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] > -1048: dict["ev"] -= -794
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] == 3: dict["eb"] += -384
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] != 2614: dict["he"] -= -10
+max_value = max(max(dict.values()),max_value)
+if dict["e"] > -906: dict["e"] -= -317
+max_value = max(max(dict.values()),max_value)
+if dict["d"] >= 2946: dict["e"] += -662
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] != 0: dict["s"] += 941
+max_value = max(max(dict.values()),max_value)
+if dict["e"] <= -1235: dict["xoc"] += 765
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] > 354: dict["b"] += 434
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] > 880: dict["e"] += 513
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] > 734: dict["cox"] += 146
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] == 316: dict["mk"] += -31
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] == -547: dict["qby"] += 887
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] != -536: dict["obo"] -= -87
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] != 2217: dict["he"] += -230
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] < 326: dict["e"] -= -469
+max_value = max(max(dict.values()),max_value)
+if dict["d"] != 2950: dict["alf"] += 608
+max_value = max(max(dict.values()),max_value)
+if dict["v"] < -4355: dict["mqk"] -= -78
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] < 356: dict["b"] += -865
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] < 7: dict["s"] -= 57
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] > -4428: dict["npo"] -= -100
+max_value = max(max(dict.values()),max_value)
+if dict["red"] > -1522: dict["cag"] += -217
+max_value = max(max(dict.values()),max_value)
+if dict["k"] == 2898: dict["b"] -= 338
+max_value = max(max(dict.values()),max_value)
+if dict["k"] <= 2906: dict["npo"] += -324
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] >= -1687: dict["mk"] -= -763
+max_value = max(max(dict.values()),max_value)
+if dict["d"] > 2945: dict["e"] += 760
+max_value = max(max(dict.values()),max_value)
+if dict["v"] == -4350: dict["e"] -= 984
+max_value = max(max(dict.values()),max_value)
+if dict["he"] <= -1126: dict["obo"] += 651
+max_value = max(max(dict.values()),max_value)
+if dict["d"] >= 2950: dict["red"] -= -380
+max_value = max(max(dict.values()),max_value)
+if dict["k"] > 2888: dict["b"] += 11
+max_value = max(max(dict.values()),max_value)
+if dict["red"] <= -1142: dict["v"] -= -406
+max_value = max(max(dict.values()),max_value)
+if dict["e"] <= 501: dict["anb"] -= -900
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] != 1471: dict["ty"] += -2
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] > 2619: dict["tm"] -= -655
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] < -540: dict["k"] += 142
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] != 1265: dict["ev"] += -346
+max_value = max(max(dict.values()),max_value)
+if dict["k"] >= 3032: dict["xoc"] -= -284
+max_value = max(max(dict.values()),max_value)
+if dict["k"] == 3040: dict["d"] += -908
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] == -41: dict["e"] += 36
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] != 930: dict["xoc"] -= 372
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] != 1159: dict["s"] -= -327
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] < 343: dict["e"] += 56
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] == -221: dict["v"] += -445
+max_value = max(max(dict.values()),max_value)
+if dict["s"] >= 2746: dict["xoc"] -= 265
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] >= -42: dict["k"] -= 604
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] > -2662: dict["alf"] += 918
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] != -150: dict["mk"] += -227
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] <= 2614: dict["cox"] -= -693
+max_value = max(max(dict.values()),max_value)
+if dict["k"] != 2434: dict["d"] += 88
+max_value = max(max(dict.values()),max_value)
+if dict["k"] > 2428: dict["tm"] -= -278
+max_value = max(max(dict.values()),max_value)
+if dict["red"] <= -1145: dict["v"] -= 384
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] != -1390: dict["npo"] += 854
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] >= 893: dict["he"] += 69
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] <= -2650: dict["d"] += 587
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] == 1785: dict["b"] -= 873
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] != 1230: dict["tm"] -= -557
+max_value = max(max(dict.values()),max_value)
+if dict["k"] <= 2437: dict["k"] -= -335
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] != -4424: dict["d"] += -215
+max_value = max(max(dict.values()),max_value)
+if dict["red"] == -1140: dict["obo"] -= -754
+max_value = max(max(dict.values()),max_value)
+if dict["v"] != -4766: dict["d"] += 369
+max_value = max(max(dict.values()),max_value)
+if dict["red"] >= -1155: dict["tm"] -= -12
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] <= 892: dict["anb"] -= -836
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] <= -4422: dict["s"] += -170
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] != 1234: dict["k"] -= -717
+max_value = max(max(dict.values()),max_value)
+if dict["k"] >= 2764: dict["npo"] += -790
+max_value = max(max(dict.values()),max_value)
+if dict["red"] <= -1157: dict["obo"] -= -87
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] >= -1401: dict["v"] -= -894
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] >= -49: dict["cag"] += -440
+max_value = max(max(dict.values()),max_value)
+if dict["d"] > 3091: dict["e"] += 31
+max_value = max(max(dict.values()),max_value)
+if dict["he"] != -1057: dict["v"] -= -581
+max_value = max(max(dict.values()),max_value)
+if dict["k"] <= 2775: dict["anb"] -= 760
+max_value = max(max(dict.values()),max_value)
+if dict["v"] != -3295: dict["swy"] -= 513
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] > 1242: dict["s"] += 840
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] > -549: dict["npo"] -= -359
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] >= -1403: dict["red"] -= -958
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] != 2617: dict["ty"] -= -246
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] <= 544: dict["k"] += -28
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] > 545: dict["npo"] += -881
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] < -1391: dict["ty"] -= -733
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] <= -4863: dict["e"] -= 750
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] < 1843: dict["cox"] -= -44
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] < -1390: dict["mk"] += 751
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] > 1980: dict["he"] += -968
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] != 202: dict["d"] -= -431
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] != 902: dict["v"] += 406
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] <= 1991: dict["tm"] += 635
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] <= 1022: dict["npo"] -= 401
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] >= -1034: dict["v"] -= 940
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] < 2619: dict["npo"] -= 572
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] != 1021: dict["swy"] += 934
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] == 893: dict["eb"] += 499
+max_value = max(max(dict.values()),max_value)
+if dict["s"] < 2568: dict["mqk"] += 17
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] != 1836: dict["mqk"] -= -704
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] != 162: dict["ty"] += -301
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] >= 579: dict["npo"] -= 29
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] > -409: dict["alf"] += -677
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] == -399: dict["mk"] -= -399
+max_value = max(max(dict.values()),max_value)
+if dict["e"] == -213: dict["cox"] -= 639
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] < 2617: dict["ev"] += 602
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] != -2149: dict["ev"] -= -238
+max_value = max(max(dict.values()),max_value)
+if dict["k"] > 2734: dict["mqk"] += 26
+max_value = max(max(dict.values()),max_value)
+if dict["v"] > -4238: dict["anb"] -= -153
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] != 584: dict["b"] += -331
+max_value = max(max(dict.values()),max_value)
+if dict["s"] > 2574: dict["mk"] -= 411
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] == 902: dict["xoc"] -= -631
+max_value = max(max(dict.values()),max_value)
+if dict["d"] != 3083: dict["mqk"] -= 795
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] > 1184: dict["swy"] -= -911
+max_value = max(max(dict.values()),max_value)
+if dict["e"] >= -217: dict["anb"] -= 368
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] != 2612: dict["b"] -= 463
+max_value = max(max(dict.values()),max_value)
+if dict["v"] <= -4226: dict["qby"] -= -127
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] != -409: dict["alf"] += -848
+max_value = max(max(dict.values()),max_value)
+if dict["s"] >= 2571: dict["obo"] -= -499
+max_value = max(max(dict.values()),max_value)
+if dict["v"] < -4225: dict["swy"] -= 165
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] == -609: dict["alf"] -= 71
+max_value = max(max(dict.values()),max_value)
+if dict["d"] != 3090: dict["b"] -= -717
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] <= 3694: dict["cag"] += 721
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] > 1033: dict["xoc"] += 304
+max_value = max(max(dict.values()),max_value)
+if dict["d"] < 3096: dict["swy"] += 728
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] >= -2163: dict["tm"] += -690
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] == 1025: dict["qby"] += 979
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] >= 1449: dict["s"] -= -175
+max_value = max(max(dict.values()),max_value)
+if dict["he"] > -2038: dict["s"] -= 639
+max_value = max(max(dict.values()),max_value)
+if dict["red"] <= -189: dict["mqk"] -= 615
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] >= 578: dict["he"] -= 481
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] <= 1532: dict["anb"] += -329
+max_value = max(max(dict.values()),max_value)
+if dict["red"] != -192: dict["anb"] += 350
+max_value = max(max(dict.values()),max_value)
+if dict["s"] != 2108: dict["obo"] += 720
+max_value = max(max(dict.values()),max_value)
+if dict["s"] > 2111: dict["ev"] -= -316
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] == 246: dict["mqk"] += 322
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] > 580: dict["d"] -= -723
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] >= 254: dict["b"] += -301
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] > 1528: dict["cox"] -= 847
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] <= -254: dict["v"] -= -298
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] != -4874: dict["eb"] -= -842
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] != -1324: dict["he"] += 483
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] >= -400: dict["b"] += -160
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] == 187: dict["tm"] -= 885
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] <= 2129: dict["anb"] += -505
+max_value = max(max(dict.values()),max_value)
+if dict["e"] < -212: dict["red"] -= 387
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] <= -397: dict["e"] -= 761
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] == 2128: dict["he"] -= 303
+max_value = max(max(dict.values()),max_value)
+if dict["b"] < -3718: dict["s"] -= 308
+max_value = max(max(dict.values()),max_value)
+if dict["he"] > -2041: dict["mqk"] -= -207
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] != 1533: dict["ev"] += -655
+max_value = max(max(dict.values()),max_value)
+if dict["d"] > 3809: dict["s"] += -601
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] < -256: dict["ev"] -= 666
+max_value = max(max(dict.values()),max_value)
+if dict["he"] != -2041: dict["ty"] += 384
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] >= 1403: dict["v"] += -560
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] != 194: dict["ty"] += 446
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] != -4868: dict["obo"] += -570
+max_value = max(max(dict.values()),max_value)
+if dict["k"] == 2743: dict["obo"] += 21
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] != 1973: dict["cox"] -= -183
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] <= -1306: dict["s"] += -780
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] != 2131: dict["b"] += -173
+max_value = max(max(dict.values()),max_value)
+if dict["v"] > -4488: dict["b"] += 489
+max_value = max(max(dict.values()),max_value)
+if dict["s"] < 431: dict["swy"] += 337
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] >= 240: dict["ty"] += 36
+max_value = max(max(dict.values()),max_value)
+if dict["s"] < 427: dict["xoc"] += -941
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] <= 600: dict["xoc"] -= -533
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] == 1795: dict["eb"] -= 269
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] < 1796: dict["eb"] += -718
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] <= -2039: dict["xoc"] -= 319
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] < -390: dict["ev"] -= 855
+max_value = max(max(dict.values()),max_value)
+if dict["d"] >= 3805: dict["v"] += 208
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] == 2122: dict["d"] += -846
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] <= 1977: dict["red"] += -636
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] == -1764: dict["d"] -= 695
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] == -268: dict["e"] -= -864
+max_value = max(max(dict.values()),max_value)
+if dict["d"] == 2270: dict["v"] -= -913
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] > -270: dict["alf"] += -364
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] != -4862: dict["he"] -= -211
+max_value = max(max(dict.values()),max_value)
+if dict["b"] != -3887: dict["b"] -= 624
+max_value = max(max(dict.values()),max_value)
+if dict["b"] < -4514: dict["v"] -= -953
+max_value = max(max(dict.values()),max_value)
+if dict["b"] < -4518: dict["ty"] -= 631
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] <= -367: dict["e"] -= -496
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] >= -4872: dict["d"] -= -911
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] >= 1117: dict["mk"] += -549
+max_value = max(max(dict.values()),max_value)
+if dict["e"] <= -971: dict["alf"] -= -586
+max_value = max(max(dict.values()),max_value)
+if dict["k"] == 2743: dict["cag"] -= -919
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] <= -3943: dict["qby"] += -803
+max_value = max(max(dict.values()),max_value)
+if dict["k"] > 2734: dict["k"] -= 18
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] > 2909: dict["ty"] -= 537
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] >= 2122: dict["swy"] -= 973
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] == 2916: dict["d"] -= -502
+max_value = max(max(dict.values()),max_value)
+if dict["he"] >= -1816: dict["ty"] += 50
+max_value = max(max(dict.values()),max_value)
+if dict["e"] > -985: dict["cag"] -= 344
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] < 311: dict["cag"] += -967
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] != -393: dict["ev"] += 193
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] >= -5265: dict["ev"] += -934
+max_value = max(max(dict.values()),max_value)
+if dict["d"] == 3683: dict["ev"] -= 416
+max_value = max(max(dict.values()),max_value)
+if dict["d"] < 3688: dict["ty"] += -963
+max_value = max(max(dict.values()),max_value)
+if dict["s"] <= 424: dict["s"] -= -904
+max_value = max(max(dict.values()),max_value)
+if dict["b"] >= -4524: dict["b"] -= 52
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] <= -363: dict["alf"] += -427
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] > -268: dict["red"] -= -686
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] == -695: dict["b"] -= 551
+max_value = max(max(dict.values()),max_value)
+if dict["v"] > -2428: dict["xoc"] -= -670
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] >= 401: dict["anb"] += 310
+max_value = max(max(dict.values()),max_value)
+if dict["red"] < -519: dict["ev"] -= 768
+max_value = max(max(dict.values()),max_value)
+if dict["k"] == 2725: dict["tm"] -= -391
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] < 1797: dict["b"] += -624
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] != 391: dict["s"] += -962
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] > -703: dict["xoc"] += -482
+max_value = max(max(dict.values()),max_value)
+if dict["v"] < -2418: dict["alf"] += -110
+max_value = max(max(dict.values()),max_value)
+if dict["s"] < 1329: dict["mqk"] += -812
+max_value = max(max(dict.values()),max_value)
+if dict["red"] >= -529: dict["cag"] -= -584
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] >= -405: dict["qby"] -= -503
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] <= -396: dict["npo"] -= -592
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] < 313: dict["anb"] += -611
+max_value = max(max(dict.values()),max_value)
+if dict["red"] < -538: dict["anb"] += -537
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] < -4664: dict["eb"] += 781
+max_value = max(max(dict.values()),max_value)
+if dict["he"] >= -1821: dict["xoc"] -= -241
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] >= 816: dict["k"] += -974
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] > -3690: dict["eb"] -= -649
+max_value = max(max(dict.values()),max_value)
+if dict["b"] > -5750: dict["he"] -= 258
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] >= 2513: dict["cag"] += -618
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] == 190: dict["b"] += -132
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] > 1427: dict["cox"] += -187
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] <= 198: dict["tm"] -= 244
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] != 350: dict["cag"] += -21
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] >= -3696: dict["npo"] += -332
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] < -3698: dict["obo"] += -144
+max_value = max(max(dict.values()),max_value)
+if dict["k"] >= 1744: dict["npo"] += 652
+max_value = max(max(dict.values()),max_value)
+if dict["b"] > -5739: dict["anb"] += 682
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] > -607: dict["mk"] -= -585
+max_value = max(max(dict.values()),max_value)
+if dict["red"] <= -521: dict["ty"] -= -395
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] < -260: dict["d"] -= -118
+max_value = max(max(dict.values()),max_value)
+if dict["d"] < 3797: dict["obo"] -= 97
+max_value = max(max(dict.values()),max_value)
+if dict["s"] != 1327: dict["mk"] += 561
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] < 1558: dict["mqk"] += 341
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] >= 1546: dict["eb"] -= 136
+max_value = max(max(dict.values()),max_value)
+if dict["b"] == -5744: dict["eb"] -= -144
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] < 1560: dict["b"] -= 416
+max_value = max(max(dict.values()),max_value)
+if dict["red"] <= -520: dict["e"] += -688
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] <= -264: dict["cag"] += -846
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] >= 2009: dict["e"] += 858
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] < -1165: dict["d"] += 120
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] < -304: dict["eb"] += 275
+max_value = max(max(dict.values()),max_value)
+if dict["e"] <= -801: dict["d"] -= 426
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] == 358: dict["obo"] += -175
+max_value = max(max(dict.values()),max_value)
+if dict["v"] > -2433: dict["b"] += 411
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] != 3420: dict["anb"] -= -285
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] != -257: dict["e"] += -899
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] >= 1552: dict["ty"] += 764
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] == 2273: dict["eb"] += 157
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] <= 1562: dict["alf"] -= 416
+max_value = max(max(dict.values()),max_value)
+if dict["d"] <= 3498: dict["mqk"] += -251
+max_value = max(max(dict.values()),max_value)
+if dict["e"] != -1698: dict["s"] += -405
+max_value = max(max(dict.values()),max_value)
+if dict["v"] < -2419: dict["he"] -= 280
+max_value = max(max(dict.values()),max_value)
+if dict["e"] == -1705: dict["mqk"] -= 783
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] > 2013: dict["s"] -= -530
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] >= 3421: dict["cox"] -= 601
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] <= -253: dict["alf"] -= -214
+max_value = max(max(dict.values()),max_value)
+if dict["v"] < -2418: dict["cox"] += -280
+max_value = max(max(dict.values()),max_value)
+if dict["k"] > 1749: dict["obo"] += -617
+max_value = max(max(dict.values()),max_value)
+if dict["v"] >= -2427: dict["tm"] -= 400
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] == 820: dict["obo"] += -810
+max_value = max(max(dict.values()),max_value)
+if dict["red"] < -524: dict["cag"] += 245
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] < -1973: dict["k"] += 939
+max_value = max(max(dict.values()),max_value)
+if dict["d"] != 3499: dict["xoc"] += -867
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] >= -3690: dict["ev"] += 930
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] == 513: dict["npo"] += 490
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] <= 1874: dict["obo"] -= -127
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] < -539: dict["v"] += -937
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] < -315: dict["cox"] += 806
+max_value = max(max(dict.values()),max_value)
+if dict["b"] == -5749: dict["tm"] += 868
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] != 264: dict["d"] += 370
+max_value = max(max(dict.values()),max_value)
+if dict["d"] >= 3488: dict["mk"] -= 735
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] >= 2736: dict["v"] -= 651
+max_value = max(max(dict.values()),max_value)
+if dict["d"] == 3495: dict["d"] -= 751
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] == -320: dict["eb"] += 73
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] >= -2202: dict["anb"] += 946
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] != 2731: dict["k"] += -879
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] >= -5075: dict["cag"] -= 329
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] <= 998: dict["v"] -= 110
+max_value = max(max(dict.values()),max_value)
+if dict["v"] != -4012: dict["cox"] += -324
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] <= 688: dict["s"] -= -43
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] <= 1552: dict["xoc"] += 154
+max_value = max(max(dict.values()),max_value)
+if dict["e"] == -1705: dict["npo"] -= 126
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] < 3428: dict["mqk"] += 631
+max_value = max(max(dict.values()),max_value)
+if dict["k"] < 882: dict["obo"] -= 875
+max_value = max(max(dict.values()),max_value)
+if dict["d"] >= 2737: dict["eb"] += -159
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] < 1266: dict["ty"] += 158
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] != -65: dict["cox"] += -726
+max_value = max(max(dict.values()),max_value)
+if dict["he"] <= -2352: dict["red"] += 699
+max_value = max(max(dict.values()),max_value)
+if dict["he"] == -2353: dict["anb"] -= 348
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] <= -792: dict["mqk"] -= -25
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] == 1550: dict["he"] += -72
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] >= -2712: dict["tm"] -= -396
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] >= 153: dict["mqk"] += -730
+max_value = max(max(dict.values()),max_value)
+if dict["b"] <= -5741: dict["ty"] += 950
+max_value = max(max(dict.values()),max_value)
+if dict["b"] <= -5747: dict["qby"] += 711
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] == 2500: dict["he"] += 990
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] <= -5394: dict["eb"] += 691
+max_value = max(max(dict.values()),max_value)
+if dict["v"] >= -4001: dict["v"] -= 315
+max_value = max(max(dict.values()),max_value)
+if dict["k"] == 872: dict["cag"] += 831
+max_value = max(max(dict.values()),max_value)
+if dict["s"] != 974: dict["cag"] -= -285
+max_value = max(max(dict.values()),max_value)
+if dict["k"] >= 865: dict["tm"] += 500
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] >= -2761: dict["ty"] += -407
+max_value = max(max(dict.values()),max_value)
+if dict["v"] >= -4019: dict["ev"] -= -960
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] < -781: dict["anb"] -= 698
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] <= -783: dict["swy"] -= 265
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] < 237: dict["e"] -= -962
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] != 555: dict["he"] -= -152
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] < 159: dict["npo"] -= -416
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] > 4127: dict["red"] -= 450
+max_value = max(max(dict.values()),max_value)
+if dict["s"] <= 964: dict["cag"] += 253
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] <= 3634: dict["cox"] -= -969
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] < 4135: dict["e"] -= 442
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] > 4128: dict["mk"] -= 890
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] != 2085: dict["cag"] -= -934
+max_value = max(max(dict.values()),max_value)
+if dict["k"] != 876: dict["cox"] -= 905
+max_value = max(max(dict.values()),max_value)
+if dict["k"] <= 862: dict["red"] += 595
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] > 1286: dict["b"] += 105
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] == 394: dict["obo"] -= 502
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] != -2718: dict["ty"] -= 533
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] < 386: dict["ev"] += -6
+max_value = max(max(dict.values()),max_value)
+if dict["d"] < 2746: dict["npo"] += -144
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] >= -1813: dict["e"] += -232
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] > 1553: dict["alf"] += -78
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] != -1796: dict["eb"] += -637
+max_value = max(max(dict.values()),max_value)
+if dict["e"] != -1425: dict["tm"] -= 132
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] == 78: dict["swy"] += 667
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] <= 387: dict["red"] -= -166
+max_value = max(max(dict.values()),max_value)
+if dict["v"] >= -4014: dict["swy"] -= -173
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] > 4121: dict["qby"] += 788
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] <= 4919: dict["ty"] -= 172
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] == 3501: dict["red"] -= 447
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] == 78: dict["obo"] -= 366
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] != -2305: dict["he"] -= -842
+max_value = max(max(dict.values()),max_value)
+if dict["d"] >= 2736: dict["xoc"] += -10
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] != -726: dict["ev"] += 517
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] != 1151: dict["mqk"] -= 865
+max_value = max(max(dict.values()),max_value)
+if dict["red"] <= -552: dict["obo"] += 29
+max_value = max(max(dict.values()),max_value)
+if dict["b"] == -5644: dict["qby"] += -337
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] != -3172: dict["cag"] -= -970
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] != 827: dict["e"] -= 343
+max_value = max(max(dict.values()),max_value)
+if dict["v"] == -4017: dict["d"] -= -890
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] > 220: dict["v"] -= 793
+max_value = max(max(dict.values()),max_value)
+if dict["he"] == -599: dict["cox"] -= -442
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] > 225: dict["eb"] -= -759
+max_value = max(max(dict.values()),max_value)
+if dict["k"] == 872: dict["obo"] -= 45
+max_value = max(max(dict.values()),max_value)
+if dict["e"] > -1764: dict["obo"] -= -534
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] >= 1149: dict["cag"] += 344
+max_value = max(max(dict.values()),max_value)
+if dict["e"] <= -1764: dict["eb"] += -458
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] > -3167: dict["obo"] -= 55
+max_value = max(max(dict.values()),max_value)
+if dict["v"] > -4813: dict["s"] -= -487
+max_value = max(max(dict.values()),max_value)
+if dict["d"] >= 2744: dict["xoc"] -= -51
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] >= 1387: dict["ty"] -= 568
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] <= -276: dict["cag"] += -698
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] > -3170: dict["cag"] -= 162
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] > 4579: dict["k"] += 563
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] >= 3498: dict["alf"] += -784
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] > -2624: dict["mqk"] -= 520
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] > 4576: dict["npo"] += -780
+max_value = max(max(dict.values()),max_value)
+if dict["he"] >= -602: dict["alf"] -= 152
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] <= 415: dict["v"] += -614
+max_value = max(max(dict.values()),max_value)
+if dict["k"] < 1445: dict["he"] -= 659
+max_value = max(max(dict.values()),max_value)
+if dict["d"] >= 2740: dict["ev"] += -49
+max_value = max(max(dict.values()),max_value)
+if dict["v"] >= -5424: dict["e"] -= 302
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] < -867: dict["ty"] -= -877
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] != 1394: dict["qby"] += 368
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] < 1396: dict["anb"] += 732
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] > -1344: dict["mk"] += 61
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] == -280: dict["b"] += -66
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] <= 1397: dict["npo"] += 11
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] >= -852: dict["swy"] += 292
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] == -3684: dict["red"] += -606
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] > -272: dict["e"] -= -460
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] > -2898: dict["s"] -= -469
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] > -2618: dict["tm"] -= -717
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] != -2893: dict["xoc"] -= -796
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] < 4222: dict["ev"] += -145
+max_value = max(max(dict.values()),max_value)
+if dict["red"] == -1167: dict["e"] -= 892
+max_value = max(max(dict.values()),max_value)
+if dict["red"] == -1164: dict["red"] += -403
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] != 389: dict["tm"] -= 519
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] <= -2900: dict["cag"] -= -107
+max_value = max(max(dict.values()),max_value)
+if dict["d"] > 2743: dict["ev"] += -385
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] <= -857: dict["qby"] += -444
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] != 1398: dict["ev"] += -201
+max_value = max(max(dict.values()),max_value)
+if dict["s"] >= 1922: dict["npo"] -= -851
+max_value = max(max(dict.values()),max_value)
+if dict["s"] <= 1923: dict["s"] += 975
+max_value = max(max(dict.values()),max_value)
+if dict["v"] != -5413: dict["alf"] += -906
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] >= 815: dict["obo"] -= 870
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] == 959: dict["obo"] += -26
+max_value = max(max(dict.values()),max_value)
+if dict["e"] <= -2951: dict["e"] -= -65
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] == 958: dict["ty"] -= -835
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] > 1394: dict["anb"] -= -49
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] <= -3680: dict["mk"] += -253
+max_value = max(max(dict.values()),max_value)
+if dict["b"] != -5708: dict["e"] -= -862
+max_value = max(max(dict.values()),max_value)
+if dict["s"] == 2896: dict["qby"] -= -293
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] != -271: dict["s"] += -845
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] >= 387: dict["xoc"] += 509
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] >= -3675: dict["obo"] -= -758
+max_value = max(max(dict.values()),max_value)
+if dict["b"] < -5703: dict["v"] += 370
+max_value = max(max(dict.values()),max_value)
+if dict["red"] >= -1172: dict["cox"] -= -986
+max_value = max(max(dict.values()),max_value)
+if dict["d"] >= 2739: dict["b"] += -682
+max_value = max(max(dict.values()),max_value)
+if dict["v"] >= -5055: dict["k"] -= 568
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] == -1764: dict["mk"] += 451
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] <= 645: dict["ty"] += -56
+max_value = max(max(dict.values()),max_value)
+if dict["s"] <= 2051: dict["eb"] -= 173
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] != 764: dict["s"] += 836
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] <= -2887: dict["alf"] -= 345
+max_value = max(max(dict.values()),max_value)
+if dict["k"] != 867: dict["cox"] -= 206
+max_value = max(max(dict.values()),max_value)
+if dict["s"] > 2053: dict["eb"] += 44
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] <= -2891: dict["d"] -= -294
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] >= 1386: dict["he"] -= 904
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] < 1399: dict["ty"] -= 499
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] > 3698: dict["e"] -= 891
+max_value = max(max(dict.values()),max_value)
+if dict["v"] < -5057: dict["b"] -= -732
+max_value = max(max(dict.values()),max_value)
+if dict["red"] != -1168: dict["qby"] += 722
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] != 379: dict["e"] += -609
+max_value = max(max(dict.values()),max_value)
+if dict["e"] < -3525: dict["b"] += 741
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] >= 3701: dict["b"] += -833
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] > -2072: dict["red"] += 282
+max_value = max(max(dict.values()),max_value)
+if dict["b"] < -5647: dict["obo"] -= 441
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] != 1005: dict["xoc"] -= -612
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] > 647: dict["s"] -= 67
+max_value = max(max(dict.values()),max_value)
+if dict["red"] > -879: dict["cox"] -= -341
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] <= 5519: dict["v"] += 316
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] == 271: dict["mk"] += -251
+max_value = max(max(dict.values()),max_value)
+if dict["b"] <= -5658: dict["ty"] -= 587
+max_value = max(max(dict.values()),max_value)
+if dict["d"] < 3044: dict["anb"] -= 204
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] < 5521: dict["he"] -= -358
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] < -3946: dict["s"] -= -594
+max_value = max(max(dict.values()),max_value)
+if dict["d"] > 3029: dict["xoc"] -= -802
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] <= -2105: dict["alf"] -= -536
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] <= 711: dict["tm"] -= 209
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] > 809: dict["s"] += -142
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] >= -3676: dict["s"] += -571
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] == -1563: dict["npo"] += 607
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] >= 1388: dict["swy"] += -438
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] != 3092: dict["b"] += 325
+max_value = max(max(dict.values()),max_value)
+if dict["s"] <= 2650: dict["k"] -= 338
+max_value = max(max(dict.values()),max_value)
+if dict["he"] == -1804: dict["cag"] -= -748
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] <= 382: dict["npo"] += -186
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] != 3483: dict["cag"] += -920
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] >= 652: dict["swy"] -= 288
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] != -3685: dict["ty"] -= 362
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] == 811: dict["alf"] += 291
+max_value = max(max(dict.values()),max_value)
+if dict["red"] == -890: dict["mqk"] += 203
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] >= 231: dict["swy"] += 712
+max_value = max(max(dict.values()),max_value)
+if dict["v"] > -5052: dict["ty"] -= 327
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] == -3684: dict["npo"] += -453
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] < -3685: dict["cox"] += 747
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] >= 698: dict["qby"] -= 844
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] != 1659: dict["cag"] += 785
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] > 3086: dict["red"] -= -820
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] < 709: dict["anb"] += -2
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] <= -2280: dict["cox"] += 91
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] <= 643: dict["cox"] += 988
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] != -433: dict["ev"] += 895
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] == -259: dict["red"] -= -411
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] > -261: dict["npo"] -= 831
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] == 643: dict["k"] -= 799
+max_value = max(max(dict.values()),max_value)
+if dict["v"] != -5054: dict["qby"] += 373
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] > 1668: dict["e"] += 949
+max_value = max(max(dict.values()),max_value)
+if dict["d"] > 3037: dict["qby"] += 278
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] != -3946: dict["eb"] += -839
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] <= 800: dict["mk"] -= 758
+max_value = max(max(dict.values()),max_value)
+if dict["s"] != 2642: dict["npo"] += -662
+max_value = max(max(dict.values()),max_value)
+if dict["e"] < -2575: dict["e"] += -807
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] <= 1669: dict["cag"] += 755
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] > 1662: dict["e"] -= -532
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] <= -596: dict["alf"] -= -4
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] <= -1170: dict["swy"] -= -552
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] != 1700: dict["d"] -= -857
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] > 798: dict["anb"] -= -31
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] < -1759: dict["eb"] -= -482
+max_value = max(max(dict.values()),max_value)
+if dict["d"] == 3897: dict["ty"] += 820
+max_value = max(max(dict.values()),max_value)
+if dict["v"] >= -5054: dict["xoc"] += -846
+max_value = max(max(dict.values()),max_value)
+if dict["d"] != 3895: dict["alf"] -= 312
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] >= -1752: dict["obo"] -= -531
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] > -1177: dict["b"] -= 722
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] == -1173: dict["d"] += 912
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] <= -1514: dict["e"] += -497
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] <= -599: dict["b"] -= 551
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] >= -1576: dict["mqk"] -= -130
+max_value = max(max(dict.values()),max_value)
+if dict["s"] >= 2649: dict["obo"] -= 426
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] >= 1698: dict["mqk"] += 672
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] <= -1568: dict["red"] += -879
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] != 1687: dict["he"] -= -503
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] != -1173: dict["tm"] -= 117
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] < 645: dict["he"] -= 237
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] != -601: dict["qby"] += 189
+max_value = max(max(dict.values()),max_value)
+if dict["k"] < -279: dict["k"] += 820
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] <= -3421: dict["mqk"] += -594
+max_value = max(max(dict.values()),max_value)
+if dict["v"] > -5041: dict["k"] -= 375
+max_value = max(max(dict.values()),max_value)
+if dict["d"] != 4807: dict["cag"] -= 298
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] != -1163: dict["b"] += 985
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] >= 1687: dict["tm"] += -697
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] >= 2212: dict["v"] -= -940
+max_value = max(max(dict.values()),max_value)
+if dict["d"] >= 4806: dict["k"] += -260
+max_value = max(max(dict.values()),max_value)
+if dict["k"] < -526: dict["ty"] -= 73
+max_value = max(max(dict.values()),max_value)
+if dict["s"] <= 2654: dict["swy"] += -530
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] >= 1686: dict["mqk"] -= 636
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] <= 5516: dict["d"] += 32
+max_value = max(max(dict.values()),max_value)
+if dict["v"] <= -4103: dict["v"] += -809
+max_value = max(max(dict.values()),max_value)
+if dict["k"] != -540: dict["e"] -= 380
+max_value = max(max(dict.values()),max_value)
+if dict["b"] == -5939: dict["ev"] += -651
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] >= -1576: dict["qby"] += 352
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] > -3416: dict["v"] += -256
+max_value = max(max(dict.values()),max_value)
+if dict["red"] <= -527: dict["mqk"] -= 28
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] > -1762: dict["alf"] += 395
+max_value = max(max(dict.values()),max_value)
+if dict["d"] < 4837: dict["ev"] -= 317
+max_value = max(max(dict.values()),max_value)
+if dict["red"] >= -528: dict["cag"] += 74
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] == 833: dict["mk"] -= -575
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] == -3421: dict["cag"] -= 744
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] == 5868: dict["mk"] -= -455
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] <= -2266: dict["k"] += 350
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] <= -1749: dict["d"] += 730
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] != 1673: dict["ty"] -= 180
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] == 1694: dict["xoc"] += 364
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] == 1694: dict["anb"] += 937
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] >= 2785: dict["s"] -= 459
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] != -2271: dict["cox"] += -594
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] > 1102: dict["cox"] -= 874
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] > -1178: dict["xoc"] -= 289
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] < -3413: dict["e"] += -178
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] >= -3416: dict["red"] -= -965
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] == -497: dict["npo"] -= -47
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] < -1697: dict["alf"] += -264
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] == -1429: dict["v"] += -518
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] == 1697: dict["red"] -= -264
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] > -3415: dict["k"] += 540
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] != 2799: dict["ev"] -= 208
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] >= 2788: dict["npo"] -= -967
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] == 1691: dict["xoc"] += 106
+max_value = max(max(dict.values()),max_value)
+if dict["s"] >= 2185: dict["eb"] -= -276
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] == -4812: dict["b"] += -151
+max_value = max(max(dict.values()),max_value)
+if dict["he"] <= -1534: dict["he"] -= 120
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] >= 1091: dict["e"] += -236
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] == -1436: dict["tm"] -= -25
+max_value = max(max(dict.values()),max_value)
+if dict["s"] == 2186: dict["xoc"] += 618
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] != 5876: dict["b"] -= 269
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] != -2267: dict["cag"] += -911
+max_value = max(max(dict.values()),max_value)
+if dict["he"] == -1658: dict["mqk"] += -68
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] > -2035: dict["alf"] += -267
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] < -733: dict["cag"] -= -228
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] > -2043: dict["k"] += -527
+max_value = max(max(dict.values()),max_value)
+if dict["red"] == -533: dict["qby"] += 341
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] >= -4879: dict["xoc"] -= 539
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] == -2032: dict["d"] -= 884
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] == -497: dict["mk"] -= -837
+max_value = max(max(dict.values()),max_value)
+if dict["k"] == -707: dict["tm"] += -879
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] > 1907: dict["k"] -= -32
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] > -2026: dict["e"] -= 771
+max_value = max(max(dict.values()),max_value)
+if dict["s"] <= 2192: dict["qby"] += -732
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] < 1700: dict["ev"] -= 629
+max_value = max(max(dict.values()),max_value)
+if dict["e"] > -4138: dict["obo"] -= -799
+max_value = max(max(dict.values()),max_value)
+if dict["k"] >= -683: dict["e"] -= -954
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] == -329: dict["ev"] += 177
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] < -2032: dict["d"] += -151
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] > -1711: dict["b"] -= 967
+max_value = max(max(dict.values()),max_value)
+if dict["b"] == -7326: dict["e"] -= 836
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] > -337: dict["he"] -= -543
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] == -1705: dict["d"] += 478
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] < 3047: dict["mqk"] -= 251
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] == 1770: dict["v"] += 235
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] > -5134: dict["xoc"] += 94
+max_value = max(max(dict.values()),max_value)
+if dict["s"] > 2176: dict["swy"] -= -106
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] != 3138: dict["cox"] += 591
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] == -329: dict["eb"] -= -594
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] == 5469: dict["he"] += -389
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] != -487: dict["swy"] -= 680
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] < -2483: dict["alf"] += 713
+max_value = max(max(dict.values()),max_value)
+if dict["b"] != -7332: dict["mqk"] -= 533
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] <= 1920: dict["mk"] -= -282
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] >= 1913: dict["d"] -= -878
+max_value = max(max(dict.values()),max_value)
+if dict["b"] > -7327: dict["ev"] += -821
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] > 5475: dict["s"] -= -229
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] > 1115: dict["tm"] -= -671
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] > 262: dict["mk"] -= 703
+max_value = max(max(dict.values()),max_value)
+if dict["v"] == -4682: dict["cag"] += 96
+max_value = max(max(dict.values()),max_value)
+if dict["mqk"] != -5672: dict["alf"] += -771
+max_value = max(max(dict.values()),max_value)
+if dict["b"] > -7322: dict["eb"] += 140
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] != 270: dict["swy"] += -493
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] == 273: dict["he"] += 826
+max_value = max(max(dict.values()),max_value)
+if dict["s"] <= 2408: dict["v"] += 82
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] <= 2585: dict["anb"] += -898
+max_value = max(max(dict.values()),max_value)
+if dict["red"] <= -531: dict["mk"] -= 735
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] >= 262: dict["obo"] += -704
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] == 2585: dict["cag"] -= -145
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] > 620: dict["k"] -= -952
+max_value = max(max(dict.values()),max_value)
+if dict["eb"] == 265: dict["mqk"] += 818
+max_value = max(max(dict.values()),max_value)
+if dict["b"] > -7325: dict["he"] += 229
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] != -746: dict["v"] -= -717
+max_value = max(max(dict.values()),max_value)
+if dict["d"] == 5890: dict["npo"] += -329
+max_value = max(max(dict.values()),max_value)
+if dict["v"] > -3957: dict["xoc"] += 820
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] != -1768: dict["ev"] += -751
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] == -1066: dict["he"] += -105
+max_value = max(max(dict.values()),max_value)
+if dict["swy"] <= 627: dict["tm"] += -86
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] < 5486: dict["npo"] += 83
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] != 1347: dict["npo"] += 829
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] >= 2504: dict["swy"] -= -554
+max_value = max(max(dict.values()),max_value)
+if dict["red"] <= -524: dict["anb"] += 836
+max_value = max(max(dict.values()),max_value)
+if dict["b"] > -7328: dict["npo"] -= -878
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] != -1763: dict["cag"] += -276
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] >= 5469: dict["red"] += 215
+max_value = max(max(dict.values()),max_value)
+if dict["d"] >= 5884: dict["eb"] += -509
+max_value = max(max(dict.values()),max_value)
+if dict["he"] >= -1119: dict["xoc"] -= -707
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] > -1801: dict["s"] -= 42
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] >= -4125: dict["s"] -= 63
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] <= -1793: dict["mk"] -= 358
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] <= -1793: dict["eb"] += 95
+max_value = max(max(dict.values()),max_value)
+if dict["b"] >= -7323: dict["eb"] -= -637
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] != 3854: dict["ty"] += -617
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] < -1112: dict["mqk"] -= 510
+max_value = max(max(dict.values()),max_value)
+if dict["tm"] != 2499: dict["he"] += -285
+max_value = max(max(dict.values()),max_value)
+if dict["qby"] < 5487: dict["ev"] += -547
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] < 730: dict["mk"] -= -915
+max_value = max(max(dict.values()),max_value)
+if dict["e"] > -4036: dict["eb"] += -953
+max_value = max(max(dict.values()),max_value)
+if dict["he"] >= -1108: dict["obo"] -= 412
+max_value = max(max(dict.values()),max_value)
+if dict["d"] < 5888: dict["npo"] += -925
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] < -1792: dict["ev"] += 930
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] <= 726: dict["v"] += 658
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] <= 1918: dict["ev"] += 892
+max_value = max(max(dict.values()),max_value)
+if dict["b"] == -7326: dict["ev"] += 756
+max_value = max(max(dict.values()),max_value)
+if dict["s"] > 2307: dict["qby"] += -574
+max_value = max(max(dict.values()),max_value)
+if dict["red"] >= -326: dict["npo"] += -638
+max_value = max(max(dict.values()),max_value)
+if dict["mk"] < 1913: dict["tm"] -= 248
+max_value = max(max(dict.values()),max_value)
+if dict["s"] < 2317: dict["cox"] += 865
+max_value = max(max(dict.values()),max_value)
+if dict["d"] <= 5893: dict["cox"] -= -950
+max_value = max(max(dict.values()),max_value)
+if dict["he"] <= -1108: dict["mk"] -= -632
+max_value = max(max(dict.values()),max_value)
+if dict["d"] <= 5893: dict["v"] += 176
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] != -1120: dict["mk"] += -805
+max_value = max(max(dict.values()),max_value)
+if dict["npo"] < 89: dict["ev"] -= 973
+max_value = max(max(dict.values()),max_value)
+if dict["s"] < 2308: dict["swy"] -= -601
+max_value = max(max(dict.values()),max_value)
+if dict["cox"] < 3509: dict["e"] -= -146
+max_value = max(max(dict.values()),max_value)
+if dict["cag"] > -1803: dict["mqk"] += 321
+max_value = max(max(dict.values()),max_value)
+if dict["alf"] >= -1764: dict["xoc"] += -534
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] >= -3004: dict["d"] -= 747
+max_value = max(max(dict.values()),max_value)
+if dict["obo"] != -4120: dict["npo"] += -826
+max_value = max(max(dict.values()),max_value)
+if dict["ev"] < -2994: dict["xoc"] += -343
+max_value = max(max(dict.values()),max_value)
+if dict["anb"] <= 1708: dict["b"] -= 415
+max_value = max(max(dict.values()),max_value)
+if dict["xoc"] > 2976: dict["b"] -= 323
+max_value = max(max(dict.values()),max_value)
+if dict["ty"] <= -1118: dict["b"] += 697
+max_value = max(max(dict.values()),max_value)
+
+highest_val = 0
+max_key = ''
+
+for key,value in dict.items():
+    if value > highest_val:
+        highest_val = value
+
+print(highest_val)
+print(max_value)
